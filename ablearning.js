@@ -17,6 +17,12 @@ app.set('port', process.env.PORT || 3000);
 // Static content
 app.use(express.static(__dirname + '/public'));
 
+// Detect tests param in query string
+app.use(function(req, res, next) {
+	res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+	next();
+})
+
 // Home page
 app.get('/', function(req, res) {
 	res.render('home');
@@ -24,7 +30,10 @@ app.get('/', function(req, res) {
 
 // About
 app.get('/about', function(req, res) {
-	res.render('about', { fortune: fortune.getFortune() });
+	res.render('about', { 
+		fortune: fortune.getFortune(),
+		pageTestScript: '/qa/test-about.js'
+	});
 });
 
 // custom 404 page

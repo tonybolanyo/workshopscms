@@ -1,0 +1,6 @@
+# ignore packages installed by npm
+node_modules
+
+# hidden windows files
+thumbs.db
+

@@ -1,0 +1,22 @@
+{
+  "name": "ablearning",
+  "version": "0.0.1",
+  "description": "Gestión de cursos de Ana Belchí con express.js",
+  "main": "ablearning.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cursos",
+    "arcilla",
+    "polimérica",
+    "ana",
+    "belchí"
+  ],
+  "author": "Tony G. Bolaño",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.3",
+    "express-handlebars": "^2.0.1"
+  }
+}
